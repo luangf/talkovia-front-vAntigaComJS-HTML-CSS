@@ -1,0 +1,16 @@
+@import url('/src/general-css/form.css');
+@import url('/src/general-css/footer.css');
+
+.remember-and-forgot {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forgot-pass {
+    width: fit-content;
+}
+
+.forgot-pass:hover {
+    background-color: #ffc67a;
+    border-radius: 5px;
+}

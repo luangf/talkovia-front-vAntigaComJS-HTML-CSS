@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login of Talkovia">
+    <meta name="author" content="Luan Gomes">
+    <link rel="shortcut icon" href="/src/img/logo2.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="/src/general-css/general-style.css">
+    <link rel="stylesheet" href="./create-account.css">
+    <title>Talkovia</title>
+</head>
+
+<body>
+    <main class="card-form">
+        <header class="card-form-header">
+            <a href="../../../private/page-after-login/page-after-login.html">
+                <img width="150" src="/src/img/logo2.jpeg" alt="Logo of Talkovia">
+            </a>
+            <h1>Sign Up</h1>
+        </header>
+
+        <button class="continue-with"><img width="34" src="/src/img/google.svg" alt="Logo of Google">Register with
+            Google</button>
+
+        <div class="or-divide">
+            <hr>or
+            <hr>
+        </div>
+
+        <small class="error-msg">Register failed. Email or username already exists</small>
+
+        <form>
+            <div class="field-group">
+                <label class="label-field-group" for="email">
+                    <img src="/src/img/mail.svg" alt="email image">
+                    Email
+                </label>
+                <input class="field" type="email" id="email" name="email" placeholder="Email" required
+                    title="Please enter your email" minlength="5" maxlength="254">
+                <small class="field-validation-msg-email hide">Please enter a valid email</small>
+            </div>
+
+            <div class="field-group">
+                <label class="label-field-group" for="username">
+                    <img src="/src/img/user.svg" alt="email image">
+                    Username
+                </label>
+                <input class="field" type="text" id="username" name="username" placeholder="Username" required
+                    title="Please enter your username" minlength="3" maxlength="30">
+                <small class="field-validation-msg-username hide">Username must have at least 3 caracteres</small>
+            </div>
+
+            <div class="field-group">
+                <label class="label-field-group" for="password">
+                    <img src="/src/img/password.svg" alt="password image">
+                    Password
+                </label>
+                <div class="input-password">
+                    <input class="field password-field" type="password" id="password" name="password"
+                        placeholder="Password" required title="Please enter your password" minlength="12"
+                        maxlength="140">
+                    <button type="button" class="eye eye-visibility-on hide">
+                        <img src="/src/img/eyeOn.svg" alt="image of eye on">
+                    </button>
+                    <button type="button" class="eye eye-visibility-off">
+                        <img src="/src/img/eyeOff.svg" alt="image of eye off">
+                    </button>
+                </div>
+            </div>
+            <div class="field-validation-msg-password hide">
+                <div class="progress">
+                    <div class="bar"></div>
+                </div>
+                <small>The password must have at least:</small>
+                <div class="validator-area">
+                    <div class="validator-item 1-upper">
+                        <div class="valid-point hide">
+                            <img class="validator-check-img" src="/src/img/check.svg" alt="right check image">
+                        </div>
+                        <div class="invalid-point">
+                            <img class="validator-check-img" src="/src/img/close.svg" alt="wrong check image">
+                        </div>
+                        <small>1 uppercase letter</small>
+                    </div>
+                    <div class="validator-item 1-lower">
+                        <div class="valid-point hide">
+                            <img class="validator-check-img" src="/src/img/check.svg" alt="right check image">
+                        </div>
+                        <div class="invalid-point">
+                            <img class="validator-check-img" src="/src/img/close.svg" alt="wrong check image">
+                        </div>
+                        <small>1 lowercase letter</small>
+                    </div>
+                    <div class="validator-item 1-number">
+                        <div class="valid-point hide">
+                            <img class="validator-check-img" src="/src/img/check.svg" alt="right check image">
+                        </div>
+                        <div class="invalid-point">
+                            <img class="validator-check-img" src="/src/img/close.svg" alt="wrong check image">
+                        </div>
+                        <small>1 number</small>
+                    </div>
+                    <div class="validator-item 1-special-char">
+                        <div class="valid-point hide">
+                            <img class="validator-check-img" src="/src/img/check.svg" alt="right check image">
+                        </div>
+                        <div class="invalid-point">
+                            <img class="validator-check-img" src="/src/img/close.svg" alt="wrong check image">
+                        </div>
+                        <small>1 special character (e.g., ! % & @ #)</small>
+                    </div>
+                    <div class="validator-item 12-chars">
+                        <div class="valid-point hide">
+                            <img class="validator-check-img" src="/src/img/check.svg" alt="right check image">
+                        </div>
+                        <div class="invalid-point">
+                            <img class="validator-check-img" src="/src/img/close.svg" alt="wrong check image">
+                        </div>
+                        <small>12 characters in total</small>
+                    </div>
+                </div>
+            </div>
+
+            <label for="remember-me-checkbox">
+                <input type="checkbox" id="remember-me-checkbox" name="remember-me-checkbox" />
+                Remember me
+            </label>
+
+            <label for="agree-checkbox">
+                <input type="checkbox" id="agree-checkbox" name="agree-checkbox" />
+                I agree to the <a href="#">Terms of Service</a>. For more information about HawkTrack's privacy
+                practices, see the <a href="#">HawkTrack Privacy Statement</a>. We'll occasionally send you
+                account-related emails.
+            </label>
+
+            <button class="btn-primary">Sign Up</button>
+        </form>
+        <p>Already have an account? <a class="have-account-link" href="../login/login.html">Login</a></p>
+    </main>
+    <footer>
+        <p><a href="#">Terms of Use</a></p>
+        <p><a href="#">Privacy</a></p>
+        <p><button class="btn-cookies">Cookie Preferences</button></p>
+        <div class="blur-modal-active hide"></div>
+        <div class="modal-cookie hide">
+            <div class="modal-cookie-header">
+                <h1>title modal</h1>
+                <img class="modal-img-close" src="/src/img/close.svg" alt="close image">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates fugiat perspiciatis sit quae
+                doloremque placeat, exercitationem quidem! Ducimus odit, laboriosam odio libero voluptatem aliquam
+                veritatis? Similique beatae natus id omnis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates fugiat perspiciatis sit quae
+                doloremque placeat, exercitationem quidem! Ducimus odit, laboriosam odio libero voluptatem aliquam
+                veritatis? Similique beatae natus id omnis!</p>
+        </div>
+        <div class="div-translate">
+            <label for="language">
+                <img src="/src/img/translate.svg" alt="translate image">
+            </label>
+            <select name="language" id="language">
+                <option value="english">English</option>
+                <option value="portugues">Português</option>
+            </select>
+        </div>
+    </footer>
+
+    <script type="module" src="./create-account.js"></script>
+</body>
+
+</html>

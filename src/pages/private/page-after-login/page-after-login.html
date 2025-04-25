@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Talkovia main page">
+    <meta name="author" content="Luan Gomes">
+    <link rel="shortcut icon" href="/src/img/logo2.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="/src/general-css/general-style.css">
+    <link rel="stylesheet" href="./page-after-login.css">
+    <title>Talkovia</title>
+    <noscript>
+        <style>
+            body {
+                display: none;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <header class="header-menu">
+        <nav>
+            <ul class="ul-header-menu">
+                <li>
+                    <a href="#">
+                        <img src="/src/img/home.svg" alt="home image">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/src/img/config.svg" alt="config image">
+                        Config
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/src/img/user.svg" alt="profile image">
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/src/img/logout.svg" alt="logout image">
+                        Logout
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/src/img/menu.svg" alt="menu image">
+                        Menu
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="card-form">
+        <h1 style="text-align: center;">Create new Category</h1>
+        <form>
+            <div class="field-group">
+                <label for="name">Category:</label>
+                <input class="field" type="text" id="name" name="name" placeholder="Category name" required
+                    title="Please enter your category" minlength="1" maxlength="100">
+                <span class="field-validation-msg-name hide">Categort name cannot be blank</span>
+            </div>
+
+            <div class="field-group">
+                <label for="description">Description:</label>
+                <textarea rows="7" class="field" id="description" name="description"
+                    title="Please enter your description" maxlength="250">
+                </textarea>
+                <span class="field-validation-msg-description hide">Description must have less than 250
+                    characters</span>
+            </div>
+
+            <button class="btn-primary">Create</button>
+        </form>
+    </main>
+
+    <section class="all-category-cards"></section>
+
+    <script type="module" src="./page-after-login.js"></script>
+</body>
+
+</html>
